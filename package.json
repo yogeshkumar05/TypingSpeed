@@ -4,7 +4,10 @@
   "description": "reactjs & redux saga setup",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot",
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d /"
   },
   "Cache-Control": "max-age",
   "repository": {

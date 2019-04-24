@@ -46,17 +46,17 @@ export default class TypeApp extends Component {
     render() {
         const textAreaStyle = this.state.doesCharMatch ? 'type-area' : 'type-area-error';
         return(<div>
-            Test your Typing Speed!!!
-            <div className='practice-text'>
+            <h1>Test your Typing Speed!!!</h1>
+            <section className='practice-text'>
                 {this.state.startString}
-            </div>
+            </section>
 
             <textarea className={textAreaStyle} onKeyDown = {this.keydownHandler} placeholder='start Typing..' value ={this.state.typedValue} onChange={this.typeHandler}/>
 
-            <div>
-                Speed: {this.state.typeSpeed} charactes per second
-            </div>
-            <button onClick={this.resetHandler}> Start Again</button>
+            <section className='type-speed'>
+                Speed: {this.state.typeSpeed.toFixed(0)} charactes per second
+            </section>
+            <button className='reset-btn' onClick={this.resetHandler}> Start Again</button>
         </div>)
     }
 }

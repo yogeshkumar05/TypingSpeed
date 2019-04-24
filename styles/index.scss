@@ -1,5 +1,11 @@
+@import './variable.scss';
+
+body {
+    background-color: $blue-gray;
+}
 h1 {
-    color: blue;
+    color: $blue;
+    text-align: center;
 }
 
 .keyboard-container {
@@ -17,13 +23,8 @@ h1 {
     margin: 1px;
     cursor: pointer;
 }
-
-
-
-
-
 .practice-text {
-    color: #fff;
+    color: $white;
     width: 60%;
     margin: 1em auto;
     font-size: 38px;
@@ -32,17 +33,30 @@ h1 {
     background: #333;
     box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    /* overflow: auto; */
+    overflow: auto;
 }
 .type-area {
-    width: 500px;
+    display: block;
+    width: 80%;
+    max-width: 500px;
     height: 150px;
+    margin: 0 auto;
 }
 .type-area-error {
+    @extend .type-area;
     width: 500px;
     height: 150px;
-    border: 3px solid red;
+    border: 3px solid $red;
 }
 .type-area-error:focus {
     outline:none;
+}
+
+.type-speed {
+    text-align: center;
+    margin: 10px;
+}
+.reset-btn {
+    display: block;
+    margin: 10px auto;
 }
